@@ -1,0 +1,30 @@
+### Recuperar todas las películas
+GET http://localhost:3000/movies
+
+### Recuperar una película por id
+GET http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+### Recuperar todas las películas de un género
+GET http://localhost:3000/movies?genre=action
+
+### Crear una película
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "title": "The Lord of the Rings: The Fellowship of the Ring",
+  "year": 2001,
+  "director": "Peter Jackson",
+  "duration": 168,
+  "poster": "https://i.ebayimg.com/images/g/yokAAOSw8w1YARbm/s-l1200.jpg",
+  "genre": ["Adventure", "Friendship", "Magic", "Fantasy", "Epic", "Action", "Drama"],
+  "rate": 9.5
+}
+
+### Actualizar una película
+PATCH http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+  "year": 2022
+}
