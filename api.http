@@ -1,28 +1,31 @@
 ### Recuperar todas las películas
-GET http://localhost:3000/movies
+GET http://localhost:1234/movies
 
 ### Recuperar una película por id
-GET http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+GET http://localhost:1234/movies/c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf
 
-### Recuperar todas las películas de un género
-GET http://localhost:3000/movies?genre=action
+### Recuperar todas las películas por un género
+GET http://localhost:1234/movies?genre=ACTION
 
-### Crear una película
-POST http://localhost:3000/movies
+### Crear una película con POST
+POST http://localhost:1234/movies
 Content-Type: application/json
 
 {
-  "title": "The Lord of the Rings: The Fellowship of the Ring",
-  "year": 2001,
-  "director": "Peter Jackson",
-  "duration": 168,
-  "poster": "https://i.ebayimg.com/images/g/yokAAOSw8w1YARbm/s-l1200.jpg",
-  "genre": ["Adventure", "Friendship", "Magic", "Fantasy", "Epic", "Action", "Drama"],
-  "rate": 9.5
+  "sql": "SELECT * FROM users",
+  "title": "The Godfather",
+  "year": 1975,
+  "director": "Francis Ford Coppola",
+  "duration": 175,
+  "poster": "https://img.fruugo.com/product/4/49/14441494_max.jpg",
+  "genre": [
+    "Crime",
+    "Drama"
+  ]
 }
 
 ### Actualizar una película
-PATCH http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+PATCH http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
 Content-Type: application/json
 
 {
